@@ -11,7 +11,7 @@ const scheduleSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-scheduleSchema.index({ businessId: 1, professionalId: 1, dayOfWeek: 1 });
+scheduleSchema.index({ businessId: 1, professionalId: 1, dayOfWeek: 1, startTime: 1, endTime: 1 }, { unique: true });
 scheduleSchema.index({ professionalId: 1, dayOfWeek: 1, isActive: 1 });
 
 export const Schedule = mongoose.model('Schedule', scheduleSchema);

@@ -11,6 +11,7 @@ const serviceSchema = new mongoose.Schema({
   requiresDeposit: { type: Boolean, default: false },
   depositAmount: { type: Number, min: 0 },
   depositType: { type: String, enum: ['fixed', 'percentage'], default: 'fixed' },
+  imageId: { type: mongoose.Schema.Types.ObjectId, default: null },
   isActive: { type: Boolean, default: true },
 }, {
   timestamps: true,
